@@ -16,12 +16,6 @@
       "service": "carvajal-solutions"
     }
   ],
-  "r2_buckets": [
-    {
-      "binding": "NEXT_INC_CACHE_R2_BUCKET",
-      "bucket_name": "carvajal-solutions-opennext-cache"
-    }
-  ],
   "images": {
     "binding": "IMAGES"
   },
