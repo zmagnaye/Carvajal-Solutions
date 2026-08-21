@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #07152f;
+  --cs-navy: #031d44;
+  --cs-blue: #04395e;
+  --cs-off-white: #f3eff5;
+  --cs-green: #72b01d;
+  --cs-green-dark: #3f7d20;
+
+  --background: var(--cs-off-white);
+  --foreground: var(--cs-navy);
 }
 
 * {
@@ -26,6 +32,6 @@ a {
 }
 
 ::selection {
-  background: #b7e400;
-  color: #07152f;
+  background: var(--cs-green);
+  color: var(--cs-navy);
 }
