@@ -27,6 +27,78 @@ const workflowSteps = [
   },
 ];
 
+const benefits = [
+  {
+    number: "01",
+    title: "Respond Faster",
+    description:
+      "Give new inquiries attention sooner instead of letting valuable leads sit unanswered.",
+  },
+  {
+    number: "02",
+    title: "Follow Up Consistently",
+    description:
+      "Create a repeatable process that keeps conversations moving even when your team gets busy.",
+  },
+  {
+    number: "03",
+    title: "Qualify More Efficiently",
+    description:
+      "Collect useful information and help identify which opportunities deserve attention.",
+  },
+  {
+    number: "04",
+    title: "Reduce Manual Work",
+    description:
+      "Spend less time repeating the same follow-up tasks and more time serving customers.",
+  },
+  {
+    number: "05",
+    title: "Keep Leads Organized",
+    description:
+      "Give your team clearer visibility into who responded, what they need, and what happens next.",
+  },
+  {
+    number: "06",
+    title: "Move Toward Scheduling",
+    description:
+      "Guide qualified prospects toward appointments, consultations, estimates, or a human handoff.",
+  },
+];
+
+const industries = [
+  {
+    name: "Home Services",
+    examples: "HVAC, plumbing, roofing, electrical",
+    initials: "HS",
+  },
+  {
+    name: "Professional Services",
+    examples: "Consulting, insurance, agencies",
+    initials: "PS",
+  },
+  {
+    name: "Real Estate",
+    examples: "Agents, teams, property services",
+    initials: "RE",
+  },
+  {
+    name: "Health & Wellness",
+    examples: "Dental, med spas, fitness",
+    initials: "HW",
+  },
+  {
+    name: "Automotive",
+    examples: "Dealers, repair, service centers",
+    initials: "AU",
+  },
+  {
+    name: "Legal",
+    examples: "Law firms and consultation-based practices",
+    initials: "LG",
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-(--cs-navy) text-(--cs-off-white)">
@@ -331,6 +403,151 @@ export default function Home() {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+            <section
+        id="about"
+        className="bg-white text-(--cs-navy)"
+      >
+        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+            <div>
+              <p className="text-sm font-bold tracking-[0.18em] text-(--cs-green-dark)">
+                WHY CARVAJAL SOLUTIONS
+              </p>
+
+              <h2 className="mt-4 text-4xl font-bold tracking-[-0.03em] sm:text-5xl">
+                Better follow-up without adding more repetitive work.
+              </h2>
+
+              <p className="mt-6 max-w-xl text-lg leading-8 text-(--cs-blue)/75">
+                The goal is not to replace your team. It is to give them a
+                stronger system for handling the repetitive parts of lead
+                communication so they can focus on the conversations that need
+                a human.
+              </p>
+
+              <div className="mt-8 rounded-3xl bg-(--cs-off-white) p-6">
+                <p className="text-sm font-bold text-(--cs-green-dark)">
+                  BUILT AROUND THE LEAD JOURNEY
+                </p>
+
+                <p className="mt-3 leading-7 text-(--cs-blue)/75">
+                  Respond → Engage → Follow Up → Qualify → Schedule → Human
+                  Handoff
+                </p>
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {benefits.map((benefit) => (
+                <article
+                  key={benefit.number}
+                  className="rounded-3xl border border-(--cs-navy)/10 bg-(--cs-off-white) p-6 transition-all hover:-translate-y-1 hover:border-(--cs-green)/40 hover:shadow-lg"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-(--cs-green) text-xs font-black text-(--cs-navy)">
+                    {benefit.number}
+                  </div>
+
+                  <h3 className="mt-5 text-xl font-bold">
+                    {benefit.title}
+                  </h3>
+
+                  <p className="mt-3 leading-7 text-(--cs-blue)/70">
+                    {benefit.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="industries"
+        className="bg-(--cs-blue) text-(--cs-off-white)"
+      >
+        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-3xl">
+              <p className="text-sm font-bold tracking-[0.18em] text-(--cs-green)">
+                FLEXIBLE BY DESIGN
+              </p>
+
+              <h2 className="mt-4 text-4xl font-bold tracking-[-0.03em] sm:text-5xl">
+                One lead system. Configurable for different businesses.
+              </h2>
+
+              <p className="mt-6 text-lg leading-8 text-(--cs-off-white)/70">
+                Carvajal Solutions is designed around a common problem shared
+                across many industries: leads need fast responses, consistent
+                follow-up, qualification, and a clear next step.
+              </p>
+            </div>
+
+            <p className="max-w-sm text-sm leading-6 text-(--cs-off-white)/55">
+              These are example use cases, not limitations. The underlying
+              workflow remains configurable around each business.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {industries.map((industry) => (
+              <article
+                key={industry.name}
+                className="group rounded-3xl border border-(--cs-off-white)/10 bg-(--cs-navy)/35 p-6 transition-all hover:-translate-y-1 hover:border-(--cs-green)/50 hover:bg-(--cs-navy)/50"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-(--cs-green) text-sm font-black text-(--cs-navy)">
+                  {industry.initials}
+                </div>
+
+                <h3 className="mt-6 text-xl font-bold">
+                  {industry.name}
+                </h3>
+
+                <p className="mt-2 leading-7 text-(--cs-off-white)/60">
+                  {industry.examples}
+                </p>
+
+                <div className="mt-6 flex items-center gap-2 text-sm font-bold text-(--cs-green)">
+                  Example workflow
+                  <span
+                    aria-hidden="true"
+                    className="transition-transform group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-14 rounded-[2rem] border border-(--cs-green)/30 bg-(--cs-navy) p-8 sm:p-10">
+            <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+              <div>
+                <p className="text-sm font-bold tracking-[0.18em] text-(--cs-green)">
+                  THE PLATFORM STAYS THE SAME
+                </p>
+
+                <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
+                  The business configuration changes. The lead engine does not.
+                </h3>
+
+                <p className="mt-4 max-w-3xl leading-7 text-(--cs-off-white)/65">
+                  Industry, services, qualification questions, tone, follow-up
+                  rules, and scheduling preferences can change while the core
+                  automation workflow remains consistent.
+                </p>
+              </div>
+
+              <a
+                href="#top"
+                className="inline-flex items-center justify-center rounded-full bg-(--cs-green) px-6 py-3.5 font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white)"
+              >
+                Back to Workflow
+              </a>
             </div>
           </div>
         </div>
