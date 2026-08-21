@@ -1,3 +1,5 @@
+import LeadDemo from "@/components/lead-demo";
+
 const workflowSteps = [
   {
     number: "01",
@@ -129,7 +131,7 @@ export default function Home() {
             aria-label="Main navigation"
           >
             <a
-              href="#workflow"
+              href="#demo"
               className="transition-colors hover:text-(--cs-green)"
             >
               How It Works
@@ -552,6 +554,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <LeadDemo/>
     </main>
   );
 }
