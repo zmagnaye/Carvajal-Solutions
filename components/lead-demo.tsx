@@ -81,7 +81,10 @@ Would you like to continue here or schedule a quick conversation?`;
   }
 
   return (
-    <section id="demo" className="bg-(--cs-off-white) text-(--cs-navy)">
+    <section
+      id="demo"
+      className="scroll-mt-10 bg-(--cs-off-white) text-(--cs-navy)"
+    >
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-32">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-bold tracking-[0.16em] text-(--cs-green-dark) sm:text-sm sm:tracking-[0.18em]">
@@ -329,11 +332,19 @@ Would you like to continue here or schedule a quick conversation?`;
           </div>
         </div>
 
-        <div className="mt-8 grid grid-cols-2 gap-3 text-center text-xs text-(--cs-blue)/55 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-8 sm:text-sm">
-          <span>No SMS sent</span>
-          <span>No email sent</span>
-          <span>No AI API cost</span>
-          <span>Safe demonstration mode</span>
+        {/* DEMO TRUST ROW */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 border-t border-(--cs-navy)/10 pt-6 text-center text-xs text-(--cs-blue)/60 sm:text-sm">
+          {[
+            "Demo mode",
+            "Nothing is sent",
+            "No data is stored",
+            "Try it safely",
+          ].map((item) => (
+            <span key={item} className="inline-flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-(--cs-green)" />
+              {item}
+            </span>
+          ))}
         </div>
       </div>
     </section>
