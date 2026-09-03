@@ -110,38 +110,26 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           <BrandLogo />
 
-          <nav
-            className="hidden items-center gap-8 text-sm font-medium text-(--cs-off-white)/70 md:flex"
-            aria-label="Main navigation"
-          >
-            <a
-              href="#workflow"
-              className="transition-colors hover:text-(--cs-green)"
+          <div className="flex items-center gap-4 sm:gap-6">
+            <nav
+              className="hidden items-center text-sm font-medium text-(--cs-off-white)/70 md:flex"
+              aria-label="Main navigation"
             >
-              How It Works
-            </a>
+              <a
+                href="#workflow"
+                className="transition-colors hover:text-(--cs-green)"
+              >
+                How It Works
+              </a>
+            </nav>
 
             <a
-              href="#industries"
-              className="transition-colors hover:text-(--cs-green)"
+              href="#demo"
+              className="rounded-full bg-(--cs-green) px-4 py-2 text-xs font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white) sm:px-5 sm:py-2.5 sm:text-sm"
             >
-              Industries
+              Try the Demo
             </a>
-
-            <a
-              href="#about"
-              className="transition-colors hover:text-(--cs-green)"
-            >
-              Why Carvajal
-            </a>
-          </nav>
-
-          <a
-            href="#demo"
-            className="rounded-full bg-(--cs-green) px-4 py-2 text-xs font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white) sm:px-5 sm:py-2.5 sm:text-sm"
-          >
-            See the Demo
-          </a>
+          </div>
         </div>
       </header>
 
@@ -152,7 +140,6 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-(--cs-blue)/20 blur-3xl" />
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-82px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:py-24">
-          {/* HERO COPY */}
           <div>
             <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-(--cs-green)/40 bg-(--cs-green)/10 px-3.5 py-2 text-xs font-semibold leading-5 text-(--cs-green) sm:mb-7 sm:px-4 sm:text-sm">
               <span className="h-2 w-2 shrink-0 rounded-full bg-(--cs-green)" />
@@ -184,10 +171,10 @@ export default function Home() {
               </a>
 
               <a
-                href="#workflow"
+                href="#demo"
                 className="inline-flex w-full items-center justify-center rounded-full border border-(--cs-off-white)/20 px-6 py-3.5 font-semibold text-(--cs-off-white) transition-colors hover:border-(--cs-green) hover:bg-(--cs-blue) sm:w-auto sm:px-7"
               >
-                Explore the Workflow
+                Try the Demo
               </a>
             </div>
 
@@ -286,50 +273,43 @@ export default function Home() {
           </div>
 
           <div className="mt-12 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4">
-            <article className="rounded-3xl border border-(--cs-navy)/10 bg-white p-5 shadow-sm sm:p-7">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-(--cs-navy) text-sm font-black text-(--cs-off-white)">
-                01
-              </div>
+            {[
+              {
+                number: "01",
+                title: "A new lead arrives",
+                description:
+                  "Someone submits a form, sends an inquiry, or asks for more information.",
+              },
+              {
+                number: "02",
+                title: "The team is busy",
+                description:
+                  "Employees are working, helping customers, or handling other priorities.",
+              },
+              {
+                number: "03",
+                title: "Follow-up gets delayed",
+                description:
+                  "Hours pass, messages are forgotten, and prospects begin looking elsewhere.",
+              },
+            ].map((item) => (
+              <article
+                key={item.number}
+                className="rounded-3xl border border-(--cs-navy)/10 bg-white p-5 shadow-sm sm:p-7"
+              >
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-(--cs-navy) text-sm font-black text-(--cs-off-white)">
+                  {item.number}
+                </div>
 
-              <h3 className="mt-5 text-xl font-bold sm:mt-6">
-                A new lead arrives
-              </h3>
+                <h3 className="mt-5 text-xl font-bold sm:mt-6">
+                  {item.title}
+                </h3>
 
-              <p className="mt-3 leading-7 text-(--cs-blue)/70">
-                Someone submits a form, sends an inquiry, or asks for more
-                information.
-              </p>
-            </article>
-
-            <article className="rounded-3xl border border-(--cs-navy)/10 bg-white p-5 shadow-sm sm:p-7">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-(--cs-navy) text-sm font-black text-(--cs-off-white)">
-                02
-              </div>
-
-              <h3 className="mt-5 text-xl font-bold sm:mt-6">
-                The team is busy
-              </h3>
-
-              <p className="mt-3 leading-7 text-(--cs-blue)/70">
-                Employees are working, helping customers, or handling other
-                priorities.
-              </p>
-            </article>
-
-            <article className="rounded-3xl border border-(--cs-navy)/10 bg-white p-5 shadow-sm sm:p-7">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-(--cs-navy) text-sm font-black text-(--cs-off-white)">
-                03
-              </div>
-
-              <h3 className="mt-5 text-xl font-bold sm:mt-6">
-                Follow-up gets delayed
-              </h3>
-
-              <p className="mt-3 leading-7 text-(--cs-blue)/70">
-                Hours pass, messages are forgotten, and prospects begin looking
-                elsewhere.
-              </p>
-            </article>
+                <p className="mt-3 leading-7 text-(--cs-blue)/70">
+                  {item.description}
+                </p>
+              </article>
+            ))}
 
             <article className="rounded-3xl border border-(--cs-green)/30 bg-(--cs-green) p-5 shadow-sm sm:p-7">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-(--cs-navy) text-sm font-black text-(--cs-off-white)">
@@ -347,7 +327,6 @@ export default function Home() {
             </article>
           </div>
 
-          {/* TRANSITION */}
           <div className="my-12 flex items-center gap-4 sm:my-16 lg:my-20">
             <div className="h-px flex-1 bg-(--cs-navy)/10" />
 
@@ -531,7 +510,7 @@ export default function Home() {
                 href="#top"
                 className="inline-flex w-full items-center justify-center rounded-full bg-(--cs-green) px-6 py-3.5 font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white) sm:w-auto"
               >
-                Back to Workflow
+                Back to Top
               </a>
             </div>
           </div>
