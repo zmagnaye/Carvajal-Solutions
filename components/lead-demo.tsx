@@ -81,21 +81,18 @@ Would you like to continue here or schedule a quick conversation?`;
   }
 
   return (
-    <section
-      id="demo"
-      className="bg-(--cs-off-white) text-(--cs-navy)"
-    >
-      <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+    <section id="demo" className="bg-(--cs-off-white) text-(--cs-navy)">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-32">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-bold tracking-[0.18em] text-(--cs-green-dark)">
+          <p className="text-xs font-bold tracking-[0.16em] text-(--cs-green-dark) sm:text-sm sm:tracking-[0.18em]">
             INTERACTIVE DEMO
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold tracking-[-0.03em] sm:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] sm:text-4xl lg:text-5xl">
             See how a lead could be followed up with automatically.
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-(--cs-blue)/75">
+          <p className="mt-6 text-base leading-7 text-(--cs-blue)/75 sm:text-lg sm:leading-8">
             Enter a few example lead details and Carvajal Solutions will
             demonstrate the type of personalized response an automated workflow
             could prepare.
@@ -106,32 +103,28 @@ Would you like to continue here or schedule a quick conversation?`;
           </p>
         </div>
 
-        <div className="mt-16 grid overflow-hidden rounded-[2rem] border border-(--cs-navy)/10 bg-white shadow-xl shadow-(--cs-navy)/5 lg:grid-cols-2">
-          <div className="p-6 sm:p-8 lg:p-10">
-            <div className="flex items-center justify-between gap-4">
+        <div className="mt-12 grid overflow-hidden rounded-3xl border border-(--cs-navy)/10 bg-white shadow-xl sm:mt-16 lg:grid-cols-2 lg:rounded-[2rem]">
+          {/* FORM */}
+          <div className="p-5 sm:p-8 lg:p-10">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-sm font-bold text-(--cs-green-dark)">
                   NEW LEAD
                 </p>
 
-                <h3 className="mt-1 text-2xl font-bold">
-                  Lead information
-                </h3>
+                <h3 className="mt-1 text-2xl font-bold">Lead information</h3>
               </div>
 
               <button
                 type="button"
                 onClick={loadSample}
-                className="rounded-full border border-(--cs-navy)/15 px-4 py-2 text-sm font-bold transition-colors hover:border-(--cs-green) hover:bg-(--cs-off-white)"
+                className="w-full rounded-full border border-(--cs-navy)/15 px-4 py-2 text-sm font-bold transition-colors hover:border-(--cs-green) hover:bg-(--cs-off-white) sm:w-auto"
               >
                 Use sample
               </button>
             </div>
 
-            <form
-              onSubmit={generateMessage}
-              className="mt-8 space-y-5"
-            >
+            <form onSubmit={generateMessage} className="mt-8 space-y-5">
               <div>
                 <label
                   htmlFor="lead-name"
@@ -259,8 +252,9 @@ Would you like to continue here or schedule a quick conversation?`;
             </form>
           </div>
 
-          <div className="bg-(--cs-navy) p-6 text-(--cs-off-white) sm:p-8 lg:p-10">
-            <div className="flex items-center justify-between gap-4 border-b border-(--cs-off-white)/10 pb-6">
+          {/* GENERATED MESSAGE */}
+          <div className="bg-(--cs-navy) p-5 text-(--cs-off-white) sm:p-8 lg:p-10">
+            <div className="flex flex-col gap-4 border-b border-(--cs-off-white)/10 pb-6 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-(--cs-green)" />
@@ -275,15 +269,15 @@ Would you like to continue here or schedule a quick conversation?`;
                 </h3>
               </div>
 
-              <span className="rounded-full bg-(--cs-blue) px-3 py-1.5 text-xs font-bold">
+              <span className="w-fit rounded-full bg-(--cs-blue) px-3 py-1.5 text-xs font-bold">
                 NOT SENT
               </span>
             </div>
 
             {message ? (
               <div className="mt-8">
-                <div className="rounded-3xl bg-(--cs-blue) p-6">
-                  <p className="whitespace-pre-line leading-8 text-(--cs-off-white)/85">
+                <div className="rounded-3xl bg-(--cs-blue) p-5 sm:p-6">
+                  <p className="whitespace-pre-line text-sm leading-7 text-(--cs-off-white)/85 sm:text-base sm:leading-8">
                     {message}
                   </p>
                 </div>
@@ -294,9 +288,7 @@ Would you like to continue here or schedule a quick conversation?`;
                       LEAD STATUS
                     </p>
 
-                    <p className="mt-2 font-bold">
-                      Engaged
-                    </p>
+                    <p className="mt-2 font-bold">Engaged</p>
                   </div>
 
                   <div className="rounded-2xl border border-(--cs-off-white)/10 p-4">
@@ -304,9 +296,7 @@ Would you like to continue here or schedule a quick conversation?`;
                       NEXT ACTION
                     </p>
 
-                    <p className="mt-2 font-bold">
-                      Continue qualification
-                    </p>
+                    <p className="mt-2 font-bold">Continue qualification</p>
                   </div>
                 </div>
 
@@ -319,7 +309,7 @@ Would you like to continue here or schedule a quick conversation?`;
                 </button>
               </div>
             ) : (
-              <div className="flex min-h-[500px] items-center justify-center">
+              <div className="flex min-h-[300px] items-center justify-center sm:min-h-[400px] lg:min-h-[500px]">
                 <div className="max-w-sm text-center">
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-(--cs-green) text-xl font-black text-(--cs-navy)">
                     AI
@@ -339,7 +329,7 @@ Would you like to continue here or schedule a quick conversation?`;
           </div>
         </div>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-(--cs-blue)/55">
+        <div className="mt-8 grid grid-cols-2 gap-3 text-center text-xs text-(--cs-blue)/55 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-8 sm:text-sm">
           <span>No SMS sent</span>
           <span>No email sent</span>
           <span>No AI API cost</span>

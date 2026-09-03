@@ -1,3 +1,4 @@
+import BrandLogo from "@/components/brand-logo";
 import LeadDemo from "@/components/lead-demo";
 
 const workflowSteps = [
@@ -103,35 +104,18 @@ const industries = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-(--cs-navy) text-(--cs-off-white)">
+    <main className="min-h-screen overflow-x-hidden bg-(--cs-navy) text-(--cs-off-white)">
+      {/* NAVBAR */}
       <header className="border-b border-(--cs-off-white)/10 bg-(--cs-navy)">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
-          <a
-            href="#top"
-            className="flex items-center gap-3"
-            aria-label="Carvajal Solutions home"
-          >
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-(--cs-green) font-bold text-(--cs-navy)">
-              CS
-            </div>
-
-            <div>
-              <p className="text-sm font-bold tracking-[0.14em] text-(--cs-off-white)">
-                CARVAJAL
-              </p>
-
-              <p className="text-xs font-medium tracking-[0.22em] text-(--cs-off-white)/60">
-                SOLUTIONS
-              </p>
-            </div>
-          </a>
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+          <BrandLogo />
 
           <nav
             className="hidden items-center gap-8 text-sm font-medium text-(--cs-off-white)/70 md:flex"
             aria-label="Main navigation"
           >
             <a
-              href="#demo"
+              href="#workflow"
               className="transition-colors hover:text-(--cs-green)"
             >
               How It Works
@@ -153,57 +137,61 @@ export default function Home() {
           </nav>
 
           <a
-            href="#workflow"
-            className="rounded-full bg-(--cs-green) px-5 py-2.5 text-sm font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white)"
+            href="#demo"
+            className="rounded-full bg-(--cs-green) px-4 py-2 text-xs font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white) sm:px-5 sm:py-2.5 sm:text-sm"
           >
             See the Demo
           </a>
         </div>
       </header>
 
+      {/* HERO */}
       <section id="top" className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(114,176,29,0.18),transparent_34%)]" />
 
         <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-(--cs-blue)/20 blur-3xl" />
 
-        <div className="relative mx-auto grid min-h-[calc(100vh-82px)] max-w-7xl items-center gap-16 px-6 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-82px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:py-24">
+          {/* HERO COPY */}
           <div>
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-(--cs-green)/40 bg-(--cs-green)/10 px-4 py-2 text-sm font-semibold text-(--cs-green)">
-              <span className="h-2 w-2 rounded-full bg-(--cs-green)" />
+            <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-(--cs-green)/40 bg-(--cs-green)/10 px-3.5 py-2 text-xs font-semibold leading-5 text-(--cs-green) sm:mb-7 sm:px-4 sm:text-sm">
+              <span className="h-2 w-2 shrink-0 rounded-full bg-(--cs-green)" />
               AI Lead Follow-Up & Appointment Automation
             </div>
 
-            <h1 className="max-w-4xl text-5xl leading-[1.02] font-bold tracking-[-0.04em] sm:text-6xl lg:text-7xl">
-              Turn More Leads Into{" "}
-              <span className="text-(--cs-green)">
+            <h1 className="max-w-4xl text-[2.65rem] leading-[0.98] font-bold tracking-[-0.045em] sm:text-6xl lg:text-7xl">
+              <span className="block">Turn More Leads Into</span>
+
+              <span className="mt-2 block text-(--cs-green)">
                 Conversations & Appointments
-              </span>{" "}
-              — Automatically.
+              </span>
+
+              <span className="mt-2 block">Automatically.</span>
             </h1>
 
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-(--cs-off-white)/70 sm:text-xl">
+            <p className="mt-6 max-w-2xl text-base leading-7 text-(--cs-off-white)/70 sm:mt-7 sm:text-xl sm:leading-8">
               Carvajal Solutions helps businesses respond to new inquiries,
               engage prospects, follow up consistently, qualify opportunities,
               and move customers toward the next step.
             </p>
 
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:gap-4">
               <a
                 href="#workflow"
-                className="inline-flex items-center justify-center rounded-full bg-(--cs-green) px-7 py-3.5 font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white)"
+                className="inline-flex w-full items-center justify-center rounded-full bg-(--cs-green) px-6 py-3.5 font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white) sm:w-auto sm:px-7"
               >
                 See How It Works
               </a>
 
               <a
                 href="#workflow"
-                className="inline-flex items-center justify-center rounded-full border border-(--cs-off-white)/20 px-7 py-3.5 font-semibold text-(--cs-off-white) transition-colors hover:border-(--cs-green) hover:bg-(--cs-blue)"
+                className="inline-flex w-full items-center justify-center rounded-full border border-(--cs-off-white)/20 px-6 py-3.5 font-semibold text-(--cs-off-white) transition-colors hover:border-(--cs-green) hover:bg-(--cs-blue) sm:w-auto sm:px-7"
               >
                 Explore the Workflow
               </a>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-(--cs-off-white)/50">
+            <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-3 text-xs text-(--cs-off-white)/50 sm:mt-10 sm:flex sm:flex-wrap sm:gap-x-8 sm:text-sm">
               <span>Fast response</span>
               <span>Consistent follow-up</span>
               <span>Lead qualification</span>
@@ -211,22 +199,23 @@ export default function Home() {
             </div>
           </div>
 
-          <div id="workflow" className="relative">
+          {/* WORKFLOW */}
+          <div id="workflow" className="relative scroll-mt-24">
             <div className="absolute -inset-8 rounded-full bg-(--cs-green)/10 blur-3xl" />
 
-            <div className="relative overflow-hidden rounded-[2rem] border border-(--cs-off-white)/10 bg-(--cs-blue)/70 p-5 shadow-2xl shadow-black/20 backdrop-blur-xl sm:p-7">
-              <div className="mb-6 flex items-center justify-between border-b border-(--cs-off-white)/10 pb-5">
+            <div className="relative overflow-hidden rounded-3xl border border-(--cs-off-white)/10 bg-(--cs-blue)/70 p-4 shadow-2xl shadow-black/20 backdrop-blur-xl sm:rounded-[2rem] sm:p-7">
+              <div className="mb-5 flex items-center justify-between gap-4 border-b border-(--cs-off-white)/10 pb-5 sm:mb-6">
                 <div>
-                  <p className="text-sm font-semibold text-(--cs-green)">
+                  <p className="text-xs font-semibold text-(--cs-green) sm:text-sm">
                     LIVE WORKFLOW
                   </p>
 
-                  <h2 className="mt-1 text-xl font-bold text-(--cs-off-white)">
+                  <h2 className="mt-1 text-lg font-bold text-(--cs-off-white) sm:text-xl">
                     New lead received
                   </h2>
                 </div>
 
-                <div className="rounded-full bg-(--cs-green-dark) px-3 py-1.5 text-xs font-bold text-(--cs-off-white)">
+                <div className="rounded-full bg-(--cs-green-dark) px-3 py-1.5 text-[10px] font-bold text-(--cs-off-white) sm:text-xs">
                   ACTIVE
                 </div>
               </div>
@@ -235,10 +224,10 @@ export default function Home() {
                 {workflowSteps.map((step, index) => (
                   <div
                     key={step.number}
-                    className="group flex gap-4 rounded-2xl border border-(--cs-off-white)/[0.08] bg-(--cs-navy)/25 p-4 transition-colors hover:bg-(--cs-navy)/40"
+                    className="group flex gap-3 rounded-2xl border border-(--cs-off-white)/10 bg-(--cs-navy)/25 p-3.5 transition-colors hover:bg-(--cs-navy)/40 sm:gap-4 sm:p-4"
                   >
                     <div className="flex flex-col items-center">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-(--cs-green) text-xs font-black text-(--cs-navy)">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-(--cs-green) text-[11px] font-black text-(--cs-navy) sm:h-10 sm:w-10 sm:text-xs">
                         {step.number}
                       </div>
 
@@ -247,12 +236,12 @@ export default function Home() {
                       )}
                     </div>
 
-                    <div className="pb-1">
-                      <h3 className="font-bold text-(--cs-off-white)">
+                    <div className="min-w-0 pb-1">
+                      <h3 className="text-sm font-bold text-(--cs-off-white) sm:text-base">
                         {step.title}
                       </h3>
 
-                      <p className="mt-1 text-sm leading-6 text-(--cs-off-white)/55">
+                      <p className="mt-1 text-xs leading-5 text-(--cs-off-white)/55 sm:text-sm sm:leading-6">
                         {step.description}
                       </p>
                     </div>
@@ -260,12 +249,12 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="mt-5 rounded-2xl bg-(--cs-green) p-5 text-(--cs-navy)">
-                <p className="text-xs font-black tracking-[0.15em]">
+              <div className="mt-4 rounded-2xl bg-(--cs-green) p-4 text-(--cs-navy) sm:mt-5 sm:p-5">
+                <p className="text-[10px] font-black tracking-[0.15em] sm:text-xs">
                   OUTCOME
                 </p>
 
-                <p className="mt-2 font-bold">
+                <p className="mt-2 text-sm font-bold sm:text-base">
                   Qualified lead → Appointment or human handoff
                 </p>
               </div>
@@ -274,20 +263,21 @@ export default function Home() {
         </div>
       </section>
 
-            <section className="bg-(--cs-off-white) text-(--cs-navy)">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+      {/* PROBLEM */}
+      <section className="bg-(--cs-off-white) text-(--cs-navy)">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-bold tracking-[0.18em] text-(--cs-green-dark)">
+            <p className="text-xs font-bold tracking-[0.16em] text-(--cs-green-dark) sm:text-sm sm:tracking-[0.18em]">
               THE PROBLEM
             </p>
 
-            <h2 className="mt-4 text-4xl font-bold tracking-[-0.03em] sm:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] sm:text-4xl lg:text-5xl">
               Leads are valuable.
               <br />
               Slow follow-up is expensive.
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-(--cs-blue)/75">
+            <p className="mt-6 text-base leading-7 text-(--cs-blue)/75 sm:text-lg sm:leading-8">
               Businesses work hard to generate new inquiries, but opportunities
               are often lost when responses are slow, follow-up is inconsistent,
               or busy teams simply do not have time to keep every conversation
@@ -295,13 +285,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-3xl border border-(--cs-navy)/10 bg-white p-7 shadow-sm">
+          <div className="mt-12 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4">
+            <article className="rounded-3xl border border-(--cs-navy)/10 bg-white p-5 shadow-sm sm:p-7">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-(--cs-navy) text-sm font-black text-(--cs-off-white)">
                 01
               </div>
 
-              <h3 className="mt-6 text-xl font-bold">
+              <h3 className="mt-5 text-xl font-bold sm:mt-6">
                 A new lead arrives
               </h3>
 
@@ -309,14 +299,14 @@ export default function Home() {
                 Someone submits a form, sends an inquiry, or asks for more
                 information.
               </p>
-            </div>
+            </article>
 
-            <div className="rounded-3xl border border-(--cs-navy)/10 bg-white p-7 shadow-sm">
+            <article className="rounded-3xl border border-(--cs-navy)/10 bg-white p-5 shadow-sm sm:p-7">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-(--cs-navy) text-sm font-black text-(--cs-off-white)">
                 02
               </div>
 
-              <h3 className="mt-6 text-xl font-bold">
+              <h3 className="mt-5 text-xl font-bold sm:mt-6">
                 The team is busy
               </h3>
 
@@ -324,14 +314,14 @@ export default function Home() {
                 Employees are working, helping customers, or handling other
                 priorities.
               </p>
-            </div>
+            </article>
 
-            <div className="rounded-3xl border border-(--cs-navy)/10 bg-white p-7 shadow-sm">
+            <article className="rounded-3xl border border-(--cs-navy)/10 bg-white p-5 shadow-sm sm:p-7">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-(--cs-navy) text-sm font-black text-(--cs-off-white)">
                 03
               </div>
 
-              <h3 className="mt-6 text-xl font-bold">
+              <h3 className="mt-5 text-xl font-bold sm:mt-6">
                 Follow-up gets delayed
               </h3>
 
@@ -339,14 +329,14 @@ export default function Home() {
                 Hours pass, messages are forgotten, and prospects begin looking
                 elsewhere.
               </p>
-            </div>
+            </article>
 
-            <div className="rounded-3xl border border-(--cs-green)/30 bg-(--cs-green) p-7 shadow-sm">
+            <article className="rounded-3xl border border-(--cs-green)/30 bg-(--cs-green) p-5 shadow-sm sm:p-7">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-(--cs-navy) text-sm font-black text-(--cs-off-white)">
                 04
               </div>
 
-              <h3 className="mt-6 text-xl font-bold text-(--cs-navy)">
+              <h3 className="mt-5 text-xl font-bold text-(--cs-navy) sm:mt-6">
                 Opportunity lost
               </h3>
 
@@ -354,85 +344,80 @@ export default function Home() {
                 A promising lead can disappear simply because another business
                 responded first.
               </p>
-            </div>
+            </article>
           </div>
 
-          <div className="my-20 flex items-center gap-4">
+          {/* TRANSITION */}
+          <div className="my-12 flex items-center gap-4 sm:my-16 lg:my-20">
             <div className="h-px flex-1 bg-(--cs-navy)/10" />
 
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-(--cs-navy) text-xl text-(--cs-green)">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-(--cs-navy) text-xl text-(--cs-green)">
               ↓
             </div>
 
             <div className="h-px flex-1 bg-(--cs-navy)/10" />
           </div>
 
-          <div className="grid items-center gap-12 rounded-[2rem] bg-(--cs-navy) p-8 text-(--cs-off-white) lg:grid-cols-[0.9fr_1.1fr] lg:p-14">
+          {/* SOLUTION */}
+          <div className="grid items-center gap-10 rounded-3xl bg-(--cs-navy) p-6 text-(--cs-off-white) sm:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-14">
             <div>
-              <p className="text-sm font-bold tracking-[0.18em] text-(--cs-green)">
+              <p className="text-xs font-bold tracking-[0.16em] text-(--cs-green) sm:text-sm sm:tracking-[0.18em]">
                 THE SOLUTION
               </p>
 
-              <h2 className="mt-4 text-4xl font-bold tracking-[-0.03em] sm:text-5xl">
+              <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] sm:text-4xl lg:text-5xl">
                 Keep every lead moving forward.
               </h2>
 
-              <p className="mt-6 text-lg leading-8 text-(--cs-off-white)/70">
+              <p className="mt-6 text-base leading-7 text-(--cs-off-white)/70 sm:text-lg sm:leading-8">
                 Carvajal Solutions gives businesses a consistent system for
                 responding, engaging, following up, qualifying, and moving
                 prospects toward the appropriate next step.
               </p>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-5">
-              {[
-                "Respond",
-                "Engage",
-                "Follow Up",
-                "Qualify",
-                "Schedule",
-              ].map((item, index) => (
-                <div
-                  key={item}
-                  className="rounded-2xl border border-(--cs-off-white)/10 bg-(--cs-blue)/60 p-5 text-center"
-                >
-                  <div className="mx-auto flex h-9 w-9 items-center justify-center rounded-full bg-(--cs-green) text-xs font-black text-(--cs-navy)">
-                    {index + 1}
-                  </div>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+              {["Respond", "Engage", "Follow Up", "Qualify", "Schedule"].map(
+                (item, index) => (
+                  <div
+                    key={item}
+                    className="rounded-2xl border border-(--cs-off-white)/10 bg-(--cs-blue)/60 p-4 text-center sm:p-5"
+                  >
+                    <div className="mx-auto flex h-9 w-9 items-center justify-center rounded-full bg-(--cs-green) text-xs font-black text-(--cs-navy)">
+                      {index + 1}
+                    </div>
 
-                  <p className="mt-4 text-sm font-bold">
-                    {item}
-                  </p>
-                </div>
-              ))}
+                    <p className="mt-4 text-xs font-bold sm:text-sm">{item}</p>
+                  </div>
+                ),
+              )}
             </div>
           </div>
         </div>
       </section>
-            <section
-        id="about"
-        className="bg-white text-(--cs-navy)"
-      >
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+
+      {/* BENEFITS */}
+      <section id="about" className="bg-white text-(--cs-navy)">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-32">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <div>
-              <p className="text-sm font-bold tracking-[0.18em] text-(--cs-green-dark)">
+              <p className="text-xs font-bold tracking-[0.16em] text-(--cs-green-dark) sm:text-sm sm:tracking-[0.18em]">
                 WHY CARVAJAL SOLUTIONS
               </p>
 
-              <h2 className="mt-4 text-4xl font-bold tracking-[-0.03em] sm:text-5xl">
+              <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] sm:text-4xl lg:text-5xl">
                 Better follow-up without adding more repetitive work.
               </h2>
 
-              <p className="mt-6 max-w-xl text-lg leading-8 text-(--cs-blue)/75">
+              <p className="mt-6 max-w-xl text-base leading-7 text-(--cs-blue)/75 sm:text-lg sm:leading-8">
                 The goal is not to replace your team. It is to give them a
                 stronger system for handling the repetitive parts of lead
                 communication so they can focus on the conversations that need
                 a human.
               </p>
 
-              <div className="mt-8 rounded-3xl bg-(--cs-off-white) p-6">
-                <p className="text-sm font-bold text-(--cs-green-dark)">
+              <div className="mt-8 rounded-3xl bg-(--cs-off-white) p-5 sm:p-6">
+                <p className="text-xs font-bold text-(--cs-green-dark) sm:text-sm">
                   BUILT AROUND THE LEAD JOURNEY
                 </p>
 
@@ -447,15 +432,13 @@ export default function Home() {
               {benefits.map((benefit) => (
                 <article
                   key={benefit.number}
-                  className="rounded-3xl border border-(--cs-navy)/10 bg-(--cs-off-white) p-6 transition-all hover:-translate-y-1 hover:border-(--cs-green)/40 hover:shadow-lg"
+                  className="rounded-3xl border border-(--cs-navy)/10 bg-(--cs-off-white) p-5 transition-all hover:-translate-y-1 hover:border-(--cs-green)/40 hover:shadow-lg sm:p-6"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-(--cs-green) text-xs font-black text-(--cs-navy)">
                     {benefit.number}
                   </div>
 
-                  <h3 className="mt-5 text-xl font-bold">
-                    {benefit.title}
-                  </h3>
+                  <h3 className="mt-5 text-xl font-bold">{benefit.title}</h3>
 
                   <p className="mt-3 leading-7 text-(--cs-blue)/70">
                     {benefit.description}
@@ -467,22 +450,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* INDUSTRIES */}
       <section
         id="industries"
         className="bg-(--cs-blue) text-(--cs-off-white)"
       >
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-32">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
-              <p className="text-sm font-bold tracking-[0.18em] text-(--cs-green)">
+              <p className="text-xs font-bold tracking-[0.16em] text-(--cs-green) sm:text-sm sm:tracking-[0.18em]">
                 FLEXIBLE BY DESIGN
               </p>
 
-              <h2 className="mt-4 text-4xl font-bold tracking-[-0.03em] sm:text-5xl">
+              <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] sm:text-4xl lg:text-5xl">
                 One lead system. Configurable for different businesses.
               </h2>
 
-              <p className="mt-6 text-lg leading-8 text-(--cs-off-white)/70">
+              <p className="mt-6 text-base leading-7 text-(--cs-off-white)/70 sm:text-lg sm:leading-8">
                 Carvajal Solutions is designed around a common problem shared
                 across many industries: leads need fast responses, consistent
                 follow-up, qualification, and a clear next step.
@@ -495,19 +479,17 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry) => (
               <article
                 key={industry.name}
-                className="group rounded-3xl border border-(--cs-off-white)/10 bg-(--cs-navy)/35 p-6 transition-all hover:-translate-y-1 hover:border-(--cs-green)/50 hover:bg-(--cs-navy)/50"
+                className="group rounded-3xl border border-(--cs-off-white)/10 bg-(--cs-navy)/35 p-5 transition-all hover:-translate-y-1 hover:border-(--cs-green)/50 hover:bg-(--cs-navy)/50 sm:p-6"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-(--cs-green) text-sm font-black text-(--cs-navy)">
                   {industry.initials}
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold">
-                  {industry.name}
-                </h3>
+                <h3 className="mt-6 text-xl font-bold">{industry.name}</h3>
 
                 <p className="mt-2 leading-7 text-(--cs-off-white)/60">
                   {industry.examples}
@@ -515,6 +497,7 @@ export default function Home() {
 
                 <div className="mt-6 flex items-center gap-2 text-sm font-bold text-(--cs-green)">
                   Example workflow
+
                   <span
                     aria-hidden="true"
                     className="transition-transform group-hover:translate-x-1"
@@ -526,10 +509,10 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-14 rounded-[2rem] border border-(--cs-green)/30 bg-(--cs-navy) p-8 sm:p-10">
+          <div className="mt-10 rounded-3xl border border-(--cs-green)/30 bg-(--cs-navy) p-6 sm:mt-14 sm:p-8 lg:p-10">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
-                <p className="text-sm font-bold tracking-[0.18em] text-(--cs-green)">
+                <p className="text-xs font-bold tracking-[0.16em] text-(--cs-green) sm:text-sm sm:tracking-[0.18em]">
                   THE PLATFORM STAYS THE SAME
                 </p>
 
@@ -546,7 +529,7 @@ export default function Home() {
 
               <a
                 href="#top"
-                className="inline-flex items-center justify-center rounded-full bg-(--cs-green) px-6 py-3.5 font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white)"
+                className="inline-flex w-full items-center justify-center rounded-full bg-(--cs-green) px-6 py-3.5 font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white) sm:w-auto"
               >
                 Back to Workflow
               </a>
@@ -554,7 +537,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <LeadDemo/>
+
+      {/* INTERACTIVE DEMO */}
+      <LeadDemo />
     </main>
   );
 }
