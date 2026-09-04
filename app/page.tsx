@@ -102,6 +102,14 @@ const industries = [
   },
 ];
 
+const conversationQuestions = [
+  "What type of business do you operate?",
+  "Where are your leads currently coming from?",
+  "How quickly are new leads usually contacted?",
+  "What part of follow-up takes the most manual work?",
+  "What would an ideal follow-up process look like?",
+];
+
 export default function Home() {
   const currentYear = new Date().getFullYear();
 
@@ -114,7 +122,7 @@ export default function Home() {
 
           <div className="flex items-center gap-4 sm:gap-6">
             <nav
-              className="hidden items-center text-sm font-medium text-(--cs-off-white)/70 md:flex"
+              className="hidden items-center gap-8 text-sm font-medium text-(--cs-off-white)/70 md:flex"
               aria-label="Main navigation"
             >
               <a
@@ -122,6 +130,13 @@ export default function Home() {
                 className="transition-colors hover:text-(--cs-green)"
               >
                 How It Works
+              </a>
+
+              <a
+                href="#contact"
+                className="transition-colors hover:text-(--cs-green)"
+              >
+                Contact
               </a>
             </nav>
 
@@ -175,7 +190,11 @@ export default function Home() {
 
               <a
                 href="#demo"
-                className="inline-flex w-full items-center justify-center rounded-full border border-(--cs-off-white)/20 px-6 py-3.5 font-semibold text-(--cs-off-white) transition-colors hover:border-(--cs-green) hover:bg-(--cs-blue) sm:w-auto sm:px-7"
+                style={{
+                  backgroundColor: "#ffffff",
+                  color: "#031d44",
+                }}
+                className="inline-flex w-full items-center justify-center rounded-full border border-white px-6 py-3.5 font-bold shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md sm:w-auto sm:px-7"
               >
                 Try the Demo
               </a>
@@ -330,6 +349,7 @@ export default function Home() {
             </article>
           </div>
 
+          {/* TRANSITION */}
           <div className="my-12 flex items-center gap-4 sm:my-16 lg:my-20">
             <div className="h-px flex-1 bg-(--cs-navy)/10" />
 
@@ -523,7 +543,76 @@ export default function Home() {
       {/* INTERACTIVE DEMO */}
       <LeadDemo />
 
-      {/* REAL SITE FOOTER */}
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="scroll-mt-10 bg-white text-(--cs-navy)"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+          <div className="overflow-hidden rounded-3xl bg-(--cs-navy) lg:rounded-[2rem]">
+            <div className="grid gap-10 p-6 sm:p-10 lg:grid-cols-[1fr_0.8fr] lg:items-center lg:p-14">
+              {/* CONTACT COPY */}
+              <div>
+                <p className="text-xs font-bold tracking-[0.16em] text-(--cs-green) sm:text-sm sm:tracking-[0.18em]">
+                  CONTACT US
+                </p>
+
+                <h2 className="mt-4 max-w-2xl text-3xl font-bold tracking-[-0.03em] text-(--cs-off-white) sm:text-4xl lg:text-5xl">
+                  Want to improve how your business follows up with leads?
+                </h2>
+
+                <p className="mt-6 max-w-2xl text-base leading-7 text-(--cs-off-white)/65 sm:text-lg sm:leading-8">
+                  Tell us about your current lead process and where follow-up is
+                  becoming difficult. We&apos;ll explore where automation could
+                  help reduce repetitive work and keep more opportunities moving
+                  forward.
+                </p>
+
+                <div className="mt-8">
+                  <a
+                    href="mailto:YOUR_EMAIL_HERE?subject=Carvajal%20Solutions%20Inquiry"
+                    className="inline-flex w-full items-center justify-center rounded-full bg-(--cs-green) px-7 py-3.5 font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white) sm:w-auto"
+                  >
+                    Contact Us
+                  </a>
+                </div>
+
+                <p className="mt-5 text-sm leading-6 text-(--cs-off-white)/45">
+                  No commitment required. Start with a conversation about your
+                  current process.
+                </p>
+              </div>
+
+              {/* CONVERSATION QUESTIONS */}
+              <div className="rounded-3xl border border-(--cs-off-white)/10 bg-(--cs-blue)/70 p-6 sm:p-8">
+                <p className="text-sm font-bold text-(--cs-green)">
+                  A GOOD FIRST CONVERSATION
+                </p>
+
+                <p className="mt-2 text-sm leading-6 text-(--cs-off-white)/55">
+                  A few things we can discuss when you reach out.
+                </p>
+
+                <div className="mt-6 space-y-5">
+                  {conversationQuestions.map((item, index) => (
+                    <div key={item} className="flex items-start gap-4">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-(--cs-green) text-xs font-black text-(--cs-navy)">
+                        {index + 1}
+                      </div>
+
+                      <p className="pt-1 text-sm leading-6 text-(--cs-off-white)/75 sm:text-base">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
       <footer className="border-t border-(--cs-off-white)/10 bg-(--cs-navy) text-(--cs-off-white)">
         <div className="mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-14 lg:px-8">
           <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-start">
@@ -532,9 +621,9 @@ export default function Home() {
               <BrandLogo />
 
               <p className="mt-5 max-w-md text-sm leading-7 text-(--cs-off-white)/60 sm:text-base">
-                Lead follow-up and appointment automation designed
-                to help businesses respond faster, follow up consistently, and
-                move opportunities forward.
+                Lead follow-up and appointment automation designed to help
+                businesses respond faster, follow up consistently, and move
+                opportunities forward.
               </p>
 
               <p className="mt-5 text-sm font-medium text-(--cs-green)">
@@ -598,7 +687,14 @@ export default function Home() {
                     href="#about"
                     className="transition-colors hover:text-(--cs-off-white)"
                   >
-                    Why Carvajal
+                    Why Us
+                  </a>
+
+                  <a
+                    href="#contact"
+                    className="transition-colors hover:text-(--cs-off-white)"
+                  >
+                    Contact Us
                   </a>
                 </div>
               </div>
