@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FormEvent, useState } from "react";
 
 type DemoForm = {
@@ -299,7 +300,9 @@ Would you like to continue here or schedule a quick conversation?`;
                       NEXT ACTION
                     </p>
 
-                    <p className="mt-2 font-bold">Continue qualification</p>
+                    <p className="mt-2 font-bold">
+                      Continue qualification
+                    </p>
                   </div>
                 </div>
 
@@ -314,8 +317,14 @@ Would you like to continue here or schedule a quick conversation?`;
             ) : (
               <div className="flex min-h-[300px] items-center justify-center sm:min-h-[400px] lg:min-h-[500px]">
                 <div className="max-w-sm text-center">
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-(--cs-green) text-xl font-black text-(--cs-navy)">
-                    AI
+                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-white p-2 shadow-lg">
+                    <Image
+                      src="/branding/CarvajalSolutionsLogo2.png"
+                      alt="Carvajal Solutions logo"
+                      width={64}
+                      height={64}
+                      className="h-full w-full object-contain"
+                    />
                   </div>
 
                   <h4 className="mt-6 text-xl font-bold">

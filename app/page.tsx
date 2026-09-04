@@ -496,17 +496,6 @@ export default function Home() {
                 <p className="mt-2 leading-7 text-(--cs-off-white)/60">
                   {industry.examples}
                 </p>
-
-                <div className="mt-6 flex items-center gap-2 text-sm font-bold text-(--cs-green)">
-                  Example workflow
-
-                  <span
-                    aria-hidden="true"
-                    className="transition-transform group-hover:translate-x-1"
-                  >
-                    →
-                  </span>
-                </div>
               </article>
             ))}
           </div>
