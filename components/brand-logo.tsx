@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 type BrandLogoProps = {
   href?: string;
@@ -13,7 +12,7 @@ export default function BrandLogo({
   className = "",
 }: BrandLogoProps) {
   return (
-    <Link
+    <a
       href={href}
       aria-label="Carvajal Solutions home"
       className={`relative block shrink-0 ${
@@ -34,6 +33,6 @@ export default function BrandLogo({
         }
         className="object-contain object-left"
       />
-    </Link>
+    </a>
   );
 }
