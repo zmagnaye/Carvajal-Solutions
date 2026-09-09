@@ -187,10 +187,10 @@ export default function Home() {
 
             <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:gap-4">
               <a
-                href="#workflow"
+                href="#contact"
                 className="inline-flex w-full items-center justify-center rounded-full bg-(--cs-green) px-6 py-3.5 font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white) sm:w-auto sm:px-7"
               >
-                See How It Works
+                Book a Consultation
               </a>
 
               <a
