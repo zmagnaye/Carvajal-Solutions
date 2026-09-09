@@ -9,9 +9,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Carvajal Solutions | Lead Follow-Up Automation",
+  title: "Carvajal Solutions | Business Automation Consulting",
   description:
-    "Carvajal Solutions helps businesses respond faster, follow up consistently, qualify leads, and move opportunities toward appointments.",
+    "Carvajal Solutions helps businesses design and implement practical automation for lead response, follow-up, intake, scheduling, notifications, and everyday workflows.",
 };
 
 export default function RootLayout({
