@@ -277,6 +277,82 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AUTOMATION CONSULTING OFFER */}
+      <section className="bg-(--cs-off-white) text-(--cs-navy)">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+            {/* OFFER COPY */}
+            <div>
+              <p className="text-xs font-bold tracking-[0.16em] text-(--cs-green-dark) sm:text-sm sm:tracking-[0.18em]">
+                WHAT WE AUTOMATE
+              </p>
+
+              <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] sm:text-4xl lg:text-5xl">
+                Practical automation built around your business.
+              </h2>
+
+              <p className="mt-6 max-w-xl text-base leading-7 text-(--cs-blue)/75 sm:text-lg sm:leading-8">
+                Carvajal Solutions works with businesses to identify repetitive
+                or inconsistent processes, design a better workflow, and
+                implement automation that fits the way your team actually
+                works.
+              </p>
+
+              <p className="mt-4 max-w-xl text-base leading-7 text-(--cs-blue)/75 sm:text-lg sm:leading-8">
+                The goal is simple: reduce unnecessary manual work, improve
+                consistency, and give your team more time to focus on the work
+                that needs human attention.
+              </p>
+            </div>
+
+            {/* OFFER EXAMPLES */}
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                {
+                  number: "01",
+                  title: "Lead Management & Follow-Up",
+                  description:
+                    "Respond to new inquiries, maintain consistent follow-up, and move qualified opportunities toward the next step.",
+                },
+                {
+                  number: "02",
+                  title: "Intake & Qualification",
+                  description:
+                    "Collect important information, organize requests, and route customers or opportunities appropriately.",
+                },
+                {
+                  number: "03",
+                  title: "Scheduling & Notifications",
+                  description:
+                    "Coordinate appointments, confirmations, reminders, and internal notifications with less repetitive work.",
+                },
+                {
+                  number: "04",
+                  title: "Workflow & System Automation",
+                  description:
+                    "Connect repetitive steps across the tools, systems, and processes your business already uses.",
+                },
+              ].map((item) => (
+                <article
+                  key={item.number}
+                  className="rounded-3xl border border-(--cs-navy)/10 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-(--cs-green)/40 hover:shadow-lg sm:p-6"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-(--cs-green) text-xs font-black text-(--cs-navy)">
+                    {item.number}
+                  </div>
+
+                  <h3 className="mt-5 text-xl font-bold">{item.title}</h3>
+
+                  <p className="mt-3 leading-7 text-(--cs-blue)/70">
+                    {item.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PROBLEM */}
       <section className="bg-(--cs-off-white) text-(--cs-navy)">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-32">
