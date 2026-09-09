@@ -126,7 +126,7 @@ export default function Home() {
               aria-label="Main navigation"
             >
               <a
-                href="#workflow"
+                href="#how-it-works"
                 className="transition-colors hover:text-(--cs-green)"
               >
                 How It Works
@@ -349,6 +349,74 @@ export default function Home() {
                 </article>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section
+        id="how-it-works"
+        className="scroll-mt-24 bg-white text-(--cs-navy)"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-bold tracking-[0.16em] text-(--cs-green-dark) sm:text-sm sm:tracking-[0.18em]">
+              HOW IT WORKS
+            </p>
+
+            <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] sm:text-4xl lg:text-5xl">
+              From repetitive process to practical automation.
+            </h2>
+
+            <p className="mt-6 text-base leading-7 text-(--cs-blue)/75 sm:text-lg sm:leading-8">
+              We start with the way your business works today, identify where
+              automation can make the biggest difference, and build a solution
+              around your actual process—not the other way around.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                number: "01",
+                title: "Discover",
+                description:
+                  "Understand your current process, where work gets repetitive, and where delays or inconsistencies are creating problems.",
+              },
+              {
+                number: "02",
+                title: "Design",
+                description:
+                  "Map out a practical automation workflow around your business goals, team, and existing process.",
+              },
+              {
+                number: "03",
+                title: "Build & Connect",
+                description:
+                  "Implement the workflow and connect the tools, systems, notifications, and steps needed to make it work.",
+              },
+              {
+                number: "04",
+                title: "Test & Refine",
+                description:
+                  "Validate the automation, make adjustments, and ensure your team stays in control of the process.",
+              },
+            ].map((item) => (
+              <article
+                key={item.number}
+                className="rounded-3xl border border-(--cs-navy)/10 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-(--cs-green)/40 hover:shadow-lg sm:p-6"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-(--cs-green) text-xs font-black text-(--cs-navy)">
+                  {item.number}
+                </div>
+
+                <h3 className="mt-5 text-xl font-bold">{item.title}</h3>
+
+                <p className="mt-3 leading-7 text-(--cs-blue)/70">
+                  {item.description}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -710,7 +778,7 @@ export default function Home() {
 
                 <div className="mt-4 flex flex-col gap-3 text-sm text-(--cs-off-white)/65">
                   <a
-                    href="#workflow"
+                    href="#how-it-works"
                     className="transition-colors hover:text-(--cs-off-white)"
                   >
                     How It Works
