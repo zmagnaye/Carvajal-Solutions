@@ -161,23 +161,22 @@ export default function Home() {
           <div>
             <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-(--cs-green)/40 bg-(--cs-green)/10 px-3.5 py-2 text-xs font-semibold leading-5 text-(--cs-green) sm:mb-7 sm:px-4 sm:text-sm">
               <span className="h-2 w-2 shrink-0 rounded-full bg-(--cs-green)" />
-              Lead Follow-Up & Appointment Automation
+              Business Automation Consulting
             </div>
 
             <h1 className="max-w-4xl text-[2.65rem] leading-[0.98] font-bold tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-              <span className="block">Turn More Leads Into</span>
+              <span className="block">Automate the Work That</span>
 
               <span className="mt-2 block text-(--cs-green)">
-                Conversations & Appointments
+                Slows Your Business Down.
               </span>
-
-              <span className="mt-2 block">Automatically.</span>
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-7 text-(--cs-off-white)/70 sm:mt-7 sm:text-xl sm:leading-8">
-              Carvajal Solutions helps businesses respond to new inquiries,
-              engage prospects, follow up consistently, qualify opportunities,
-              and move customers toward the next step.
+              Carvajal Solutions helps businesses design and implement practical
+              automation for lead response, follow-up, intake, scheduling,
+              notifications, and everyday workflows—so repetitive work is handled
+              consistently while your team stays in control.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:gap-4">
