@@ -164,11 +164,17 @@ export default function Home() {
               Business Automation Consulting
             </div>
 
-            <h1 className="max-w-4xl text-[2.65rem] leading-[0.98] font-bold tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-              <span className="block">Automate the Work That</span>
+            <h1 className="max-w-3xl text-[2.65rem] leading-[0.98] font-bold tracking-[-0.045em] sm:text-6xl lg:text-7xl">
+              <span className="block">Automate the</span>
+
+              <span className="mt-2 block">Work That</span>
 
               <span className="mt-2 block text-(--cs-green)">
-                Slows Your Business Down.
+                Slows Your
+              </span>
+
+              <span className="mt-2 block text-(--cs-green)">
+                Business Down.
               </span>
             </h1>
 
