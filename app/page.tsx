@@ -160,9 +160,11 @@ export default function Home() {
       {/* HERO */}
       <section id="top" className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(114,176,29,0.18),transparent_34%)]" />
+
         <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-(--cs-blue)/20 blur-3xl" />
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-82px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:py-24">
+          {/* HERO COPY */}
           <div>
             <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-(--cs-green)/40 bg-(--cs-green)/10 px-3.5 py-2 text-xs font-semibold leading-5 text-(--cs-green) sm:mb-7 sm:px-4 sm:text-sm">
               <span className="h-2 w-2 shrink-0 rounded-full bg-(--cs-green)" />
@@ -181,8 +183,8 @@ export default function Home() {
             <p className="mt-6 max-w-2xl text-base leading-7 text-(--cs-off-white)/70 sm:mt-7 sm:text-xl sm:leading-8">
               Carvajal Solutions helps businesses design and implement practical
               automation for lead response, follow-up, intake, scheduling,
-              notifications, and everyday workflows—so repetitive work is handled
-              consistently while your team stays in control.
+              notifications, and everyday workflows—so repetitive work is
+              handled consistently while your team stays in control.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:gap-4">
@@ -195,7 +197,10 @@ export default function Home() {
 
               <a
                 href="#demo"
-                style={{ backgroundColor: "#ffffff", color: "#031d44" }}
+                style={{
+                  backgroundColor: "#ffffff",
+                  color: "#031d44",
+                }}
                 className="inline-flex w-full items-center justify-center rounded-full border border-white px-6 py-3.5 font-bold shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md sm:w-auto sm:px-7"
               >
                 Try the Demo
@@ -210,6 +215,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* WORKFLOW */}
           <div id="workflow" className="relative scroll-mt-24">
             <div className="absolute -inset-8 rounded-full bg-(--cs-green)/10 blur-3xl" />
 
@@ -219,6 +225,7 @@ export default function Home() {
                   <p className="text-xs font-semibold text-(--cs-green) sm:text-sm">
                     LIVE WORKFLOW
                   </p>
+
                   <h2 className="mt-1 text-lg font-bold text-(--cs-off-white) sm:text-xl">
                     New lead received
                   </h2>
@@ -249,6 +256,7 @@ export default function Home() {
                       <h3 className="text-sm font-bold text-(--cs-off-white) sm:text-base">
                         {step.title}
                       </h3>
+
                       <p className="mt-1 text-xs leading-5 text-(--cs-off-white)/55 sm:text-sm sm:leading-6">
                         {step.description}
                       </p>
@@ -261,6 +269,7 @@ export default function Home() {
                 <p className="text-[10px] font-black tracking-[0.15em] sm:text-xs">
                   OUTCOME
                 </p>
+
                 <p className="mt-2 text-sm font-bold sm:text-base">
                   Qualified lead → Appointment or human handoff
                 </p>
@@ -331,7 +340,9 @@ export default function Home() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-(--cs-green) text-xs font-black text-(--cs-navy)">
                     {item.number}
                   </div>
+
                   <h3 className="mt-5 text-xl font-bold">{item.title}</h3>
+
                   <p className="mt-3 leading-7 text-(--cs-blue)/70">
                     {item.description}
                   </p>
@@ -398,7 +409,9 @@ export default function Home() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-(--cs-green) text-xs font-black text-(--cs-navy)">
                   {item.number}
                 </div>
+
                 <h3 className="mt-5 text-xl font-bold">{item.title}</h3>
+
                 <p className="mt-3 leading-7 text-(--cs-blue)/70">
                   {item.description}
                 </p>
@@ -487,6 +500,75 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TRUST */}
+      <section className="bg-white text-(--cs-navy)">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+            <div>
+              <p className="text-xs font-bold tracking-[0.16em] text-(--cs-green-dark) sm:text-sm sm:tracking-[0.18em]">
+                BUILT FOR REAL BUSINESS WORKFLOWS
+              </p>
+
+              <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] sm:text-4xl lg:text-5xl">
+                Automation should make your operation clearer, not more
+                complicated.
+              </h2>
+
+              <p className="mt-6 max-w-xl text-base leading-7 text-(--cs-blue)/75 sm:text-lg sm:leading-8">
+                The best automation supports the way your team works instead of
+                forcing your business into a rigid system. We focus on practical
+                workflows that reduce repetitive work while keeping important
+                decisions visible and controllable.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                {
+                  number: "01",
+                  title: "Built Around Your Existing Workflow",
+                  description:
+                    "Automation is designed around how your business operates today, with improvements where they make sense.",
+                },
+                {
+                  number: "02",
+                  title: "Human Oversight Where It Matters",
+                  description:
+                    "Important decisions, exceptions, and customer conversations can stay with your team.",
+                },
+                {
+                  number: "03",
+                  title: "Practical, Not Overengineered",
+                  description:
+                    "The focus stays on useful automation that solves a real operational problem without unnecessary complexity.",
+                },
+                {
+                  number: "04",
+                  title: "Clear Handoffs & Visibility",
+                  description:
+                    "Workflows are designed so your team can understand what happened, what comes next, and when human attention is needed.",
+                },
+              ].map((item) => (
+                <article
+                  key={item.number}
+                  className="rounded-3xl border border-(--cs-navy)/10 bg-(--cs-off-white) p-5 transition-all hover:-translate-y-1 hover:border-(--cs-green)/40 hover:shadow-lg sm:p-6"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-(--cs-green) text-xs font-black text-(--cs-navy)">
+                    {item.number}
+                  </div>
+
+                  <h3 className="mt-5 text-xl font-bold">{item.title}</h3>
+
+                  <p className="mt-3 leading-7 text-(--cs-blue)/70">
+                    {item.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PROBLEM */}
       <section className="bg-(--cs-off-white) text-(--cs-navy)">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-32">
@@ -566,9 +648,11 @@ export default function Home() {
 
           <div className="my-12 flex items-center gap-4 sm:my-16 lg:my-20">
             <div className="h-px flex-1 bg-(--cs-navy)/10" />
+
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-(--cs-navy) text-xl text-(--cs-green)">
               ↓
             </div>
+
             <div className="h-px flex-1 bg-(--cs-navy)/10" />
           </div>
 
@@ -740,6 +824,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* INTERACTIVE DEMO */}
       <LeadDemo />
 
       {/* CONTACT */}
