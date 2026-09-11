@@ -9,9 +9,89 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Carvajal Solutions | Business Automation Consulting",
+  metadataBase: new URL("https://carvajalsolutions.com"),
+
+  title: {
+    default: "Carvajal Solutions | Business Automation Consulting",
+    template: "%s | Carvajal Solutions",
+  },
+
   description:
-    "Carvajal Solutions helps businesses design and implement practical automation for lead response, follow-up, intake, scheduling, notifications, and everyday workflows.",
+    "Carvajal Solutions helps businesses automate repetitive workflows, improve follow-up, streamline intake and scheduling, connect systems, and reduce unnecessary manual work.",
+
+  applicationName: "Carvajal Solutions",
+
+  keywords: [
+    "business automation consulting",
+    "workflow automation",
+    "business process automation",
+    "lead follow-up automation",
+    "intake automation",
+    "scheduling automation",
+    "notification automation",
+    "system integration",
+    "process automation",
+    "Carvajal Solutions",
+  ],
+
+  authors: [
+    {
+      name: "Carvajal Solutions",
+    },
+  ],
+
+  creator: "Carvajal Solutions",
+  publisher: "Carvajal Solutions",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://carvajalsolutions.com",
+    siteName: "Carvajal Solutions",
+    title: "Carvajal Solutions | Business Automation Consulting",
+    description:
+      "Practical business automation consulting for workflows, follow-up, intake, scheduling, notifications, and connected processes.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Carvajal Solutions business automation consulting",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Carvajal Solutions | Business Automation Consulting",
+    description:
+      "Practical business automation consulting for workflows, follow-up, intake, scheduling, notifications, and connected processes.",
+    images: ["/og-image.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  category: "business",
+
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
