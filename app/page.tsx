@@ -183,7 +183,6 @@ Thank you.`);
       {/* HERO */}
       <section id="top" className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(114,176,29,0.18),transparent_34%)]" />
-
         <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-(--cs-blue)/20 blur-3xl" />
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-82px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:py-24">
@@ -782,19 +781,20 @@ Thank you.`);
               </p>
 
               <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] sm:text-4xl lg:text-5xl">
-                One lead system. Configurable for different businesses.
+                Automation built around different businesses and workflows.
               </h2>
 
               <p className="mt-6 text-base leading-7 text-(--cs-off-white)/70 sm:text-lg sm:leading-8">
-                Carvajal Solutions is designed around a common problem shared
-                across many industries: leads need fast responses, consistent
-                follow-up, qualification, and a clear next step.
+                Every business operates differently. Carvajal Solutions adapts
+                automation to the processes, tools, customers, and operational
+                needs of each organization.
               </p>
             </div>
 
             <p className="max-w-sm text-sm leading-6 text-(--cs-off-white)/55">
-              These are example use cases, not limitations. The underlying
-              workflow remains configurable around each business.
+              These industries are examples of where practical automation can
+              reduce repetitive work, improve consistency, and help teams
+              operate more efficiently.
             </p>
           </div>
 
@@ -821,17 +821,17 @@ Thank you.`);
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
                 <p className="text-xs font-bold tracking-[0.16em] text-(--cs-green) sm:text-sm sm:tracking-[0.18em]">
-                  THE PLATFORM STAYS THE SAME
+                  THE APPROACH STAYS FLEXIBLE
                 </p>
 
                 <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
-                  The business configuration changes. The lead engine does not.
+                  The workflow changes because every business works differently.
                 </h3>
 
                 <p className="mt-4 max-w-3xl leading-7 text-(--cs-off-white)/65">
-                  Industry, services, qualification questions, tone, follow-up
-                  rules, and scheduling preferences can change while the core
-                  automation workflow remains consistent.
+                  Lead management, intake, scheduling, notifications, internal
+                  processes, integrations, and automation rules can all be
+                  designed around the way your business actually operates.
                 </p>
               </div>
 
@@ -934,13 +934,13 @@ Thank you.`);
               <BrandLogo />
 
               <p className="mt-5 max-w-md text-sm leading-7 text-(--cs-off-white)/60 sm:text-base">
-                Lead follow-up and appointment automation designed to help
-                businesses respond faster, follow up consistently, and move
-                opportunities forward.
+                Practical business automation consulting for workflows,
+                follow-up, intake, scheduling, notifications, and connected
+                processes.
               </p>
 
               <p className="mt-5 text-sm font-medium text-(--cs-green)">
-                Respond • Engage • Follow Up • Qualify • Schedule
+                Automate • Connect • Streamline • Improve
               </p>
             </div>
 
@@ -1015,6 +1015,20 @@ Thank you.`);
                   >
                     Contact Us
                   </a>
+
+                  <a
+                    href="/privacy"
+                    className="transition-colors hover:text-(--cs-off-white)"
+                  >
+                    Privacy Policy
+                  </a>
+
+                  <a
+                    href="/terms"
+                    className="transition-colors hover:text-(--cs-off-white)"
+                  >
+                    Terms of Use
+                  </a>
                 </div>
               </div>
             </div>
@@ -1023,7 +1037,7 @@ Thank you.`);
           <div className="mt-10 flex flex-col gap-3 border-t border-(--cs-off-white)/10 pt-6 text-xs text-(--cs-off-white)/40 sm:flex-row sm:items-center sm:justify-between sm:text-sm">
             <p>© {currentYear} Carvajal Solutions. All rights reserved.</p>
 
-            <p>Lead follow-up and appointment automation.</p>
+            <p>Business automation consulting.</p>
           </div>
         </div>
       </footer>
