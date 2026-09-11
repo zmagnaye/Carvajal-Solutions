@@ -103,15 +103,38 @@ const industries = [
 ];
 
 const conversationQuestions = [
-  "What type of business do you operate?",
-  "Where are your leads currently coming from?",
-  "How quickly are new leads usually contacted?",
-  "What part of follow-up takes the most manual work?",
-  "What would an ideal follow-up process look like?",
+  "What process is taking too much manual time today?",
+  "Which tools or systems are involved in that process?",
+  "Where do delays, missed steps, or repetitive work happen most often?",
+  "What parts of the process should stay under human control?",
+  "What would a better workflow look like for your team?",
 ];
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
+
+  const consultationSubject = encodeURIComponent(
+    "Carvajal Solutions Consultation Request",
+  );
+
+  const consultationBody = encodeURIComponent(`Hi Patrick,
+
+I came across the Carvajal Solutions website and would like to learn more about my automation options and get help with my business.
+
+I'm hoping to connect sometime this week.
+
+My preferred date/time is:
+[Preferred date and time]
+
+The process or workflow I'd like help with is:
+[Brief description]
+
+You can contact me at:
+[Phone number or preferred contact method]
+
+Thank you.`);
+
+  const consultationLink = `mailto:pcarvajal@carvajalsolutions.com?subject=${consultationSubject}&body=${consultationBody}`;
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-(--cs-navy) text-(--cs-off-white)">
@@ -164,7 +187,6 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-(--cs-blue)/20 blur-3xl" />
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-82px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:py-24">
-          {/* HERO COPY */}
           <div>
             <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-(--cs-green)/40 bg-(--cs-green)/10 px-3.5 py-2 text-xs font-semibold leading-5 text-(--cs-green) sm:mb-7 sm:px-4 sm:text-sm">
               <span className="h-2 w-2 shrink-0 rounded-full bg-(--cs-green)" />
@@ -189,7 +211,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:gap-4">
               <a
-                href="#contact"
+                href={consultationLink}
                 className="inline-flex w-full items-center justify-center rounded-full bg-(--cs-green) px-6 py-3.5 font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white) sm:w-auto sm:px-7"
               >
                 Book a Consultation
@@ -837,32 +859,42 @@ export default function Home() {
             <div className="grid gap-10 p-6 sm:p-10 lg:grid-cols-[1fr_0.8fr] lg:items-center lg:p-14">
               <div>
                 <p className="text-xs font-bold tracking-[0.16em] text-(--cs-green) sm:text-sm sm:tracking-[0.18em]">
-                  CONTACT US
+                  LET&apos;S TALK
                 </p>
 
                 <h2 className="mt-4 max-w-2xl text-3xl font-bold tracking-[-0.03em] text-(--cs-off-white) sm:text-4xl lg:text-5xl">
-                  Want to improve how your business follows up with leads?
+                  Tell us what&apos;s slowing your business down.
                 </h2>
 
                 <p className="mt-6 max-w-2xl text-base leading-7 text-(--cs-off-white)/65 sm:text-lg sm:leading-8">
-                  Tell us about your current lead process and where follow-up is
-                  becoming difficult. We&apos;ll explore where automation could
-                  help reduce repetitive work and keep more opportunities moving
-                  forward.
+                  Tell us about a repetitive process, workflow bottleneck, or
+                  system that takes more manual effort than it should.
+                  We&apos;ll explore where practical automation could save time,
+                  improve consistency, and give your team better visibility and
+                  control.
                 </p>
 
                 <div className="mt-8">
                   <a
-                    href="mailto:YOUR_EMAIL_HERE?subject=Carvajal%20Solutions%20Inquiry"
+                    href={consultationLink}
                     className="inline-flex w-full items-center justify-center rounded-full bg-(--cs-green) px-7 py-3.5 font-bold text-(--cs-navy) transition-all hover:-translate-y-0.5 hover:bg-(--cs-green-dark) hover:text-(--cs-off-white) sm:w-auto"
                   >
-                    Contact Us
+                    Book a Consultation
                   </a>
                 </div>
 
-                <p className="mt-5 text-sm leading-6 text-(--cs-off-white)/45">
+                <div className="mt-7">
+                  <a
+                    href="mailto:pcarvajal@carvajalsolutions.com"
+                    className="text-sm font-semibold text-(--cs-off-white)/75 transition-colors hover:text-(--cs-green) sm:text-base"
+                  >
+                    pcarvajal@carvajalsolutions.com
+                  </a>
+                </div>
+
+                <p className="mt-4 max-w-xl text-sm leading-6 text-(--cs-off-white)/45">
                   No commitment required. Start with a conversation about your
-                  current process.
+                  current process and where automation may be useful.
                 </p>
               </div>
 
