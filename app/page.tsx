@@ -185,7 +185,7 @@ Thank you.`);
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(114,176,29,0.18),transparent_34%)]" />
         <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-(--cs-blue)/20 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-82px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:py-24">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 pt-8 pb-14 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-82px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:py-24">
           <div>
             <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-(--cs-green)/40 bg-(--cs-green)/10 px-3.5 py-2 text-xs font-semibold leading-5 text-(--cs-green) sm:mb-7 sm:px-4 sm:text-sm">
               <span className="h-2 w-2 shrink-0 rounded-full bg-(--cs-green)" />
