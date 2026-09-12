@@ -15,13 +15,15 @@ export default function BrandLogo({
     <a
       href={href}
       aria-label="Carvajal Solutions home"
-      className={`flex shrink-0 items-center gap-0 ${className}`}
+      className={`flex shrink-0 items-center ${
+        compact ? "gap-2.5" : "gap-3 sm:gap-3.5"
+      } ${className}`}
     >
       <div
-        className={`relative shrink-0 ${
+        className={`relative shrink-0 overflow-hidden bg-white ${
           compact
-            ? "h-10 w-14"
-            : "h-11 w-16 sm:h-14 sm:w-20 lg:h-16 lg:w-24"
+            ? "h-9 w-9"
+            : "h-11 w-11 sm:h-12 sm:w-12 lg:h-13 lg:w-13"
         }`}
       >
         <Image
@@ -29,21 +31,17 @@ export default function BrandLogo({
           alt="Carvajal Solutions"
           fill
           priority
-          sizes={
-            compact
-              ? "56px"
-              : "(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
-          }
-          className="object-contain object-left"
+          sizes={compact ? "36px" : "(max-width: 640px) 44px, 52px"}
+          className="object-contain"
         />
       </div>
 
       <span
         style={{ fontFamily: "var(--font-montserrat)" }}
-        className={`-ml-1 whitespace-nowrap font-semibold leading-none tracking-[-0.02em] text-(--cs-off-white) sm:-ml-2 ${
+        className={`whitespace-nowrap font-semibold leading-none tracking-[-0.025em] text-(--cs-off-white) ${
           compact
-            ? "text-[1.05rem] sm:text-lg"
-            : "text-[1.15rem] sm:text-[1.45rem] lg:text-[1.55rem]"
+            ? "text-base sm:text-lg"
+            : "text-[1.05rem] sm:text-[1.3rem] lg:text-[1.4rem]"
         }`}
       >
         Carvajal Solutions
